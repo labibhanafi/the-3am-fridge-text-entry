@@ -10,4 +10,5 @@ if (Buffer.byteLength(ENTRY, "utf8") > 140 || ENTRY.trim().length === 0) {
 }
 
 mkdirSync("/output", { recursive: true });
+// Persist the entry text exactly as defined above — no extra newline is appended.
 writeFileSync("/output/entry.txt", ENTRY, "utf8");
